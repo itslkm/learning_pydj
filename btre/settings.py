@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'btredb',
+        'USER' : 'appuser',
+        'PASSWORD': 'appuser',
+        'PORT': '5000',
+        'HOST': 'gcp-pydj-test-pgsql-ha.de.gcp.springernature.cloud', 
     }
 }
 
